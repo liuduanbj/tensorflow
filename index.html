@@ -2,17 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
+  />
   <title>TensorFlow.js 示例</title>
 </head>
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-  <script>
-     // Define a model for linear regression. 
-     const model = tf.sequential(); 
-     model.add(tf.layers.dense({units: 1, inputShape: [1]}));
-     model.compile({loss: 'meanSquaredError', optimizer: 'sgd'});
-  </script>
+  <div id="root"></div>
   <script type="module" src="src/main.tsx"></script>
 </body>
 </html>
