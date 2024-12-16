@@ -1,0 +1,9 @@
+build/
+es/
+coverage/
+node_modules/
+schemas/
+.git/
+.vscode/
+*.lock
+CHANGELOG.md

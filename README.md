@@ -57,8 +57,8 @@
 ### 机器学习模型的三个阶段
 
 1. 训练阶段
-2. 评估阶段
-3. 推理阶段
+2. 验证阶段
+3. 评估阶段
 
 ```js
 // 创建一个简单的模型
@@ -274,41 +274,3 @@ const predictions = model.predict(input);
   0.01   // 是数字"9"的可能性
 ]
 ```
-
-### Keras（凯瑞斯 深度学习）
-
-> Keras是基于Theano的一个深度学习框架，它的设计参考了Torch，用Python语言编写，是一个高度模块化的神经网络库，支持GPU和CPU。
-> tf.keras 是用于构建和训练深度学习模型的 TensorFlow 高阶 API。利用此 API，可实现快速原型设计、先进的研究和生产
-
-### 构建学习模型
-
-Sequential 对于堆叠层很有用，其中每一层都有一个输入张量和一个输出张量。层是具有已知数学结构的函数，可以重复使用并具有可训练的变量。大多数 TensorFlow 模型都由层组成。
-
-```js
-// 创建一个简单的分类模型
-const model = tf.sequential({
-  layers: [
-    tf.layers.dense({
-      units: 10,  // 10个可能的类别
-      activation: 'softmax',  // 将结果转换为概率
-      inputShape: [784]  // 输入特征数量
-    })
-  ]
-});
-
-// 预测一个样本
-const prediction = model.predict(input);
-prediction.print();
-
-// 输出可能像这样：
-// 数组中的每个数字代表该类的可能性
-// [0.1, 0.05, 0.02, 0.6, 0.03, 0.05, 0.05, 0.05, 0.03, 0.02]
-```
-
-## 代码演示
-
-### 简单的线性回归
-
-## 性能考虑
-
-## 开发注意事项
